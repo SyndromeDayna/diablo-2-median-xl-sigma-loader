@@ -9,3 +9,4 @@ Usage:
 3. Launch
 
 Source code is inside median_xl_sigma_loader.lpr file.
+You can compile it using Lazarus IDE.
