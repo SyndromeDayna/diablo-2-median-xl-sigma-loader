@@ -1,6 +1,6 @@
 # Diablo 2: Median xl sigma loader
 
-- Allows you to use D2Stats.exe under linux.
+- Allows you to use [D2Stats.exe](https://github.com/Kyromyr/D2Stats) under linux.
 - Solves "Failed too many times in a row. Check log for details. Closing D2Stats..." error.
 - Should also help mac and windows users.
 
