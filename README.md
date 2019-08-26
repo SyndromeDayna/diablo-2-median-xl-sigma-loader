@@ -5,7 +5,7 @@
 - Should also help mac and windows users.
 
 Usage:
-1. Download [sigma-loader.exe](sigma-loader.exe)
+1. Download [sigma-loader.exe](https://github.com/SyndromeDayna/diablo-2-median-xl-sigma-loader/raw/master/sigma-loader.exe)
 2. Move it to game directory
 3. Launch
 
