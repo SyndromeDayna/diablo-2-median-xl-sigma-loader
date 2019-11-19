@@ -18,8 +18,14 @@ const
 var
 	diablo_process_handle:dword;
 
-procedure death(how_did_i_die:unicodestring);
+procedure death(how_did_i_die:unicodestring; error_code:dword = 0);
+var
+	code:unicodestring;
 begin
+	if error_code <> 0 then begin
+		System.str(error_code,code);
+		how_did_i_die+= ' (error code: '+code+')';
+	end;
 	MessageBoxW(0,@how_did_i_die[1],nil,0); Halt;
 end;
 
@@ -31,7 +37,7 @@ begin
 	ZeroMemory(@startup_info,SizeOf(startup_info));
 	startup_info.cb := SizeOf(startup_info);
 	if CreateProcessW('game.exe',GetCommandLineW(),nil,nil,false,0,nil,nil,@startup_info,@handles) = false then
-		death('Loader failed to launch game.exe');
+		death('Loader failed to launch game.exe',GetLastError);
 	diablo_process_handle:= handles.hProcess;
 end;
 
@@ -57,7 +63,7 @@ begin
 		nil,
 		nil
 	);
-	if zero <> 0 then death('Loader failed to deprotect game.exe');
+	if zero <> 0 then death('Loader failed to deprotect game.exe',zero);
 end;
 
 
