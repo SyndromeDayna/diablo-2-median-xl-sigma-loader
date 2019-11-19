@@ -33,10 +33,12 @@ procedure create_diablo_process();
 var
 	startup_info: TSTARTUPINFOW;
 	handles: TProcessInformation;
+	command:unicodestring;
 begin
 	ZeroMemory(@startup_info,SizeOf(startup_info));
 	startup_info.cb := SizeOf(startup_info);
-	if CreateProcessW('game.exe',GetCommandLineW(),nil,nil,false,0,nil,nil,@startup_info,@handles) = false then
+	command:= 'game.exe '+GetCommandLineW();
+	if CreateProcessW(nil,@command[1],nil,nil,false,0,nil,nil,@startup_info,@handles) = false then
 		death('Loader failed to launch game.exe',GetLastError);
 	diablo_process_handle:= handles.hProcess;
 end;
