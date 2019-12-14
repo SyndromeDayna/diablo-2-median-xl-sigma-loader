@@ -11,7 +11,7 @@ Usage:
 
 Dependencies:
  - Latest development or staging wine. Stable wine is not supported.
- - [Microsoft Visual C++ Redistributable 2015 x32](https://github.com/Kyromyr/D2Stats/releases/latest/download/vc_redist.x86.exe) (for D2Stats)
+ - [Microsoft C++ Redistributable 2015](https://github.com/Kyromyr/D2Stats/releases/latest/download/vc_redist.x86.exe) (for D2Stats)
 
 Known issues:
 1. Game does not start due to access violation c0000005
@@ -25,7 +25,6 @@ Recommended settings:
 1. Set wine version to windows 10. Otherwise the game may freeze.
 2. After executing `winetricks vcrun2015` command wine version may be set to windows xp. Set it back to windows 10.
 3. Launch glide-init.exe in the game directory and set Texture Memory to 108 Mb (Max). Otherwise the game may freeze.
-4. Launch the game in fullscreen mode. Otherwise the game may freeze. 
 
 
 Source code is inside [median_xl_sigma_loader.lpr](median_xl_sigma_loader.lpr) file.
