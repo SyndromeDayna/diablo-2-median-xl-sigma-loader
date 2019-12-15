@@ -14,5 +14,5 @@ Dependencies:
 	
 Recommended settings:
  - Set wine version to windows 10.
- - Run glide-init.exe in the game directory and set Texture Memory to 108 Mb (Max).
+ - Run glide-init.exe in the game directory and set texture memory to 108 MB (Max).
  - Otherwise the game may freeze.
