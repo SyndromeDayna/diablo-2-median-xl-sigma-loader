@@ -10,7 +10,7 @@ Usage:
 3. Launch
 
 Dependencies:
- - Latest development or staging wine. Stable wine is not supported.
+ - Wine 5.0 or newer.
 	
 Recommended settings:
  - Set wine version to windows 10.
